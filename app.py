@@ -16,3 +16,14 @@ students = [
 ]
 
 st.table(students)
+
+students = []
+
+name = st.text_input("Student Name")
+age = st.number_input("Student Age", min_value=1)
+
+if st.button("Add Student"):
+    students.append({"name": name, "age": age})
+    st.success("Student Added")
+
+st.write(students)
